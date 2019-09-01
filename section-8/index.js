@@ -54,7 +54,7 @@ async function app() {
       // Get the most likely class and confidences from the classifier module.
       const result = await classifier.predictClass(activation);
 
-      const classes = ['A', 'B', 'C', 'D'];
+      const classes = ['No Hand', 'Fist', 'Pointer Finger', '5 Fingers'];
       document.getElementById('console').innerText = `
         prediction: ${classes[result.classIndex]}\n
         probability: ${result.confidences[result.classIndex]}
